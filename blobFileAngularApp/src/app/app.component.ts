@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FileSaverService } from 'ngx-filesaver';
+import { Document, Packer, Paragraph, TextRun } from 'docx';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +8,34 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  
-  title = 'blobFileAngularApp';
+
+  constructor(private fileSaver: FileSaverService) {}
 
   generateWord(): void {
-    console.log('Hola');
-    
+
+    const fileName = "manfredCV";
+
+    // Usando la libreria docx, creamos un documento simple 'Hello World'
+    const doc = new Document({
+      sections: [
+        {
+          properties: {},
+          children: [
+            new Paragraph({
+              children: [
+                new TextRun('Hello World'),
+              ],
+            }),
+          ],
+        },
+      ],
+    });
+
+
+    // Por medio de docx, transformamos el documento a formato blob y
+    // lo descargamos con la libreria ngx-file-saver
+    Packer.toBlob(doc).then((blob) => {
+      this.fileSaver.save(blob, fileName);
+    });
   }
 }
