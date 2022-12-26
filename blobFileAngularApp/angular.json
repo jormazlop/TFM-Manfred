@@ -20,6 +20,10 @@
             "outputPath": "dist/blob-file-angular-app",
             "index": "src/index.html",
             "main": "src/main.ts",
+            "allowedCommonJsDependencies": [
+              "file-saver",
+              "docx"
+            ],
             "polyfills": [
               "zone.js"
             ],

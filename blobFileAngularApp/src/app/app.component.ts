@@ -33,7 +33,7 @@ export class AppComponent {
 
 
     // Por medio de docx, transformamos el documento a formato blob y
-    // lo descargamos con la libreria ngx-file-saver
+    // lo descargamos con la libreria ngx-filesaver
     Packer.toBlob(doc).then((blob) => {
       this.fileSaver.save(blob, fileName);
     });
