@@ -1,0 +1,10 @@
+<div class="manfred-container">
+    <h1>Manfred 2 Word</h1>
+    <h2 class="manfred-description">Pega aqui tu perfil Manfred (JSON) y te lo exportamos en formato CV a Ms Word</h2>
+   <!--textarea class="manfred-textarea" cols="80" rows="10" placeholder="Pega aqui el JSON de Manfred"></textarea>
+   -->
+    <ngx-codemirror [options]="codeMirrorOptions" [(ngModel)]="codeMirrorValue">
+    </ngx-codemirror>
+    <button class="manfred-word-button" (click)="generateWord()">Generar Word</button>
+</div>
+

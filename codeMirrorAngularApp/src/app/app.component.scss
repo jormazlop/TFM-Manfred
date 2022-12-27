@@ -1,0 +1,39 @@
+.manfred-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+
+    .manfred-description {
+        text-align: center;
+        font-size: large;
+    }
+
+    .manfred-textarea {
+        font-family: 'Open Sans', sans-serif;
+        margin: 20px 0;
+        padding: 20px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .manfred-word-button {
+        background-color: darken(#d9d900, 15);
+        border: none;
+        border-radius: 20px;
+        box-shadow: 4px 4px 5px black;
+        color: #fff;
+        font-family: 'Open Sans', sans-serif;
+        padding: 10px 20px;
+        transition-duration: 0.5s;
+
+        &:hover {
+            background-color: darken(#d9d900, 25);
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+    }
+}

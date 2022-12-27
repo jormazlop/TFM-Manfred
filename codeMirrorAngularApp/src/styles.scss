@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import '~codemirror/lib/codemirror.css';
+
+body {
+    background-color: darken(#fff, 10); 
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+// Code mirror styles
+.CodeMirror {
+    height: fit-content;
+    margin: 10px 0 20px;
+    width: 40vw;
+}
