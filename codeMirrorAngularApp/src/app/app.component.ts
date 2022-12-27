@@ -9,9 +9,10 @@ import { Document, Packer, Paragraph, TextRun } from 'docx';
 })
 export class AppComponent {
 
+  // Opciones Code Mirror
   codeMirrorOptions = {
-    lineNumbers: true,
-    mode: { name: "javascript", json: true }
+    lineNumbers: true, // Mostrar numero de linea
+    mode: { name: "javascript", json: true } // Formato y highlights JSON
   }
 
   codeMirrorValue = '';
@@ -19,6 +20,8 @@ export class AppComponent {
   constructor(private fileSaver: FileSaverService) {}
 
   generateWord(): void {
+
+    // TODO - Validar que el formato es correcto? 
 
     const fileName = "manfredCV";
 

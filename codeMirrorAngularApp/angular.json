@@ -22,7 +22,8 @@
             "main": "src/main.ts",
             "allowedCommonJsDependencies": [
               "file-saver",
-              "docx"
+              "docx",
+              "codemirror"
             ],
             "polyfills": [
               "zone.js"
